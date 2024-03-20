@@ -1,27 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
+import React from "react";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import SignIn from "./Component/SignIn";
+import SignUp from "./Component/SignUp";
 
 function App() {
-  const [ file , setFile] = useState(null);
-
-  function handleupload(){
-      if(!file){
-        console.log("no file selected");
-        return ;
-      }
-      const fd = new FormData();
-      fd.append('file' , file);
-  }
-
   return (
     <div className="App">
-       <h1>Uploading files in React</h1>
-       <input onChange={ (e) => {setFile (e.target.files[0])}}type="file">
-       <button onClick={ handleupload }>
-        Upload
-       </button>
-       </input>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          {/* Add a catch-all route */}
+          <Route path="*" element={<Navigate to="/signin" replace />} />
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
