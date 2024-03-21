@@ -8,12 +8,7 @@ import SignUp from "./Component/SignUp";
 function App() {
   return (
     <div className="App">
-       <h1>Uploading files in React</h1>
-       <input onChange={ (e) => {setFile (e.target.files[0])}}type="file">
-       <button onClick={ handleupload }>
-        Upload
-       </button>
-       </input>
+      <UploadPage/>
     </div>
   );
 }
