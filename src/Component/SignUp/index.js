@@ -29,19 +29,19 @@ const SignUp = () => {
           <div className="form-part">
             <form onSubmit={handleSubmit}>
               <div className="form-group1 flex flex-col space-y-2">
-              <label className="form-lable1 text-black">Name</label>
+              <label className="form-lable1 flex text-black">Name</label>
                 <input
                   className="form-input1 w-full border border-pink-500 rounded px-4 py-2"
                   onChange={(e) => setName(e.target.value)}
                   type="text"
                 />
-                <label className="form-lable1 text-black">Email Address</label>
+                <label className="form-lable1 flex text-black">Email Address</label>
                 <input
                   className="form-input1 w-full border border-pink-500 rounded px-4 py-2"
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
                 />
-                <label className="form-lable1 text-black">Password</label>
+                <label className="form-lable1 flex text-black">Password</label>
                 <input
                   className="form-input1 w-full border border-pink-500 rounded px-4 py-2"
                   onChange={(e) => setPassword(e.target.value)}
