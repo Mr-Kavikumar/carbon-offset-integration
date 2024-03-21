@@ -31,7 +31,7 @@ const SignIn = () => {
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col space-y-4">
               <div>
-                <label className="block flex text-black">Email Address</label>
+                <label className="flex text-black">Email Address</label>
                 <input
                   className="w-full border border-pink-500 rounded px-4 py-2"
                   onChange={(e) => setEmail(e.target.value)}
@@ -39,7 +39,7 @@ const SignIn = () => {
                 />
               </div>
               <div>
-                <label className="block flex text-black " >Password</label>
+                <label className="flex text-black " >Password</label>
                 <input
                   className="w-full border border-pink-500 rounded px-4 py-2 "
                   onChange={(e) => setPassword(e.target.value)}
@@ -53,12 +53,14 @@ const SignIn = () => {
             </p>
               </div>
               <div className="w-full flex justify-center">
+                <Link to = '/UploadPage'>
                 <button
                   className="bg-black text-white rounded-lg py-2 px-4 hover:bg-gray-800 transition duration-300"
                   type="submit"
                 >
                   Sign In !
                 </button>
+                </Link>
               </div>
             </div>
           </form>
