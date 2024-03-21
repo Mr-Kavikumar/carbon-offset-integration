@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -11,8 +12,12 @@ const SignIn = () => {
     e.preventDefault();
     setError("");
     try {
-      // Your sign-in logic here
-      console.log("Sign in logic goes here");
+     
+      const response = await axios.post('http://localhost:3003/login', {
+        email: email,
+        password: password
+      });
+      console.log(response.data); 
       navigate("/account");
     } catch (e) {
       setError(e.message);

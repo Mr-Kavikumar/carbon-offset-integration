@@ -1,18 +1,27 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      // Your sign-up logic here
-      console.log("Sign up logic goes here");
+      
+      const response = await axios.post('http://localhost:3003/register', {
+        name: name,
+        email: email,
+        password: password
+      });
+      console.log(response.data); 
+     
+      navigate("/account");
     } catch (e) {
       setError(e.message);
       console.log(e.message);
