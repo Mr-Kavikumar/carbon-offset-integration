@@ -31,6 +31,9 @@ export function UploadPage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      // Retrieve token from localStorage
+    const token = localStorage.getItem('token');
+console.log(token);
       const formData = new FormData();
       formData.append('rcbookfrontImage', rcbookfrontImage);
       formData.append('rcbookbackImage', rcbookbackImage);
@@ -39,9 +42,10 @@ export function UploadPage() {
       formData.append('insurancefrontImage', insurancefrontImage);
 
       const response = await axios.post('http://localhost:3003/upload', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+         headers: {
+        'Authorization': `Bearer ${token}`, // Include token in Authorization header
+        'Content-Type': 'multipart/form-data' // Specify content type for FormData
+      }
       });
       console.log(response.data); 
     } catch (error) {

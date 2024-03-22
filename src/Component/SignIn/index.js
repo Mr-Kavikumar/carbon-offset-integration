@@ -12,18 +12,27 @@ const SignIn = () => {
     e.preventDefault();
     setError("");
     try {
-     
       const response = await axios.post('http://localhost:3003/login', {
         email: email,
         password: password
       });
-      console.log(response.data); 
-      navigate("/account");
-    } catch (e) {
-      setError(e.message);
-      console.log(e.message);
+  
+      // Extract JWT token from response
+      const token = response.data.token;
+  console.log(token);
+      // Save token in localStorage
+      localStorage.setItem('token', token);
+  
+      console.log("User logged in successfully");
+      // Redirect user to account page or any other desired page
+      navigate("/UploadPage");
+    } catch (error) {
+      // Handle login error
+      setError(error.response.data.message);
+      console.error("Login failed:", error.response.data.message);
     }
   };
+  
 
   return (
     <div className="h-screen flex justify-center items-center">
@@ -56,16 +65,14 @@ const SignIn = () => {
                 Sign Up!
               </Link>
             </p>
-              </div>
+          </div>
               <div className="w-full flex justify-center">
-                <Link to = '/UploadPage'>
-                <button
+              <button
                   className="bg-black text-white rounded-lg py-2 px-4 hover:bg-gray-800 transition duration-300"
                   type="submit"
                 >
                   Sign In !
                 </button>
-                </Link>
               </div>
             </div>
           </form>
