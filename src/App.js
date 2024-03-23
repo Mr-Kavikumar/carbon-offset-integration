@@ -1,7 +1,7 @@
 import './App.css';
-import { UploadPage } from "../src/Component/UploadPage"
+import { UploadPage } from "./Component/UploadPage"
 import React from "react";
-import Dashboard from './Component/DashBoard';
+import Dashboard from './Component/DashboardPage';
 import { BrowserRouter  , Route , Routes , Navigate } from 'react-router-dom';
 import SignIn from './Component/SignIn';
 import SignUp from './Component/SignUp';
