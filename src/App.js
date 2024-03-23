@@ -7,6 +7,7 @@ import SignIn from './Component/SignIn';
 import SignUp from './Component/SignUp';
 import Communication from './Component/CommunicationPage';
 import Chart from './Component/ChartPage';
+import Document from './Component/DocumentPage'
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="/uploadpage" element={<UploadPage />} />
           <Route path="/Communication" element={<Communication />} />
           <Route path="/Chart" element={<Chart />} />
+          <Route path="/Document" element={<Document />} />
+
 
         </Routes>
       </BrowserRouter>
