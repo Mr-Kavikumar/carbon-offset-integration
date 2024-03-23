@@ -8,7 +8,7 @@ const Dashboard = () => {
     // Assuming you have an API endpoint to fetch carbon value from Arduino
     const fetchCarbonValue = async () => {
       try {
-        const response = await axios.get('YOUR_ARDUINO_API_ENDPOINT');
+        const response = await axios.get('https://api.thingspeak.com/channels/2409021/feeds.json');
         setCarbonValue(response.data.carbonValue);
       } catch (error) {
         console.error('Error fetching carbon value:', error);

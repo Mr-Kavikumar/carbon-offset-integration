@@ -24,8 +24,11 @@ const SignIn = () => {
       localStorage.setItem('token', token);
   
       console.log("User logged in successfully");
-      // Redirect user to account page or any other desired page
-      navigate("/UploadPage");
+      const redirect = response.data.redirect;
+      console.log(redirect);
+
+      // Redirect user based on response
+      navigate(redirect);
     } catch (error) {
       // Handle login error
       setError(error.response.data.message);
