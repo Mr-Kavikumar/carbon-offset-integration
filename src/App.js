@@ -6,6 +6,7 @@ import { BrowserRouter  , Route , Routes , Navigate } from 'react-router-dom';
 import SignIn from './Component/SignIn';
 import SignUp from './Component/SignUp';
 import Communication from './Component/CommunicationPage';
+import Chart from './Component/ChartPage';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route path="/DashBoard" element={<Dashboard/>} />
           <Route path="/uploadpage" element={<UploadPage />} />
           <Route path="/Communication" element={<Communication />} />
+          <Route path="/Chart" element={<Chart />} />
+
         </Routes>
       </BrowserRouter>
     </div>
