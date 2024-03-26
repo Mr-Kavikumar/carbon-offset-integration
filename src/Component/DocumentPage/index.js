@@ -65,11 +65,11 @@ const DocumentPage = () => {
             <div className='flex-grow '>
                 <div className="p-4">
                     <h2 className="text-3xl font-bold mb-8 text-center">Vehicle Documents</h2>
-                    <div className="flex flex-wrap justify-center gap-4" style={{ maxWidth: '800px', margin: '0 auto' }}>
+                    <div className="flex flex-wrap justify-center gap-4" style={{ maxWidth: '900px', margin: '0 auto' }}>
                         {images.map((image, index) => (
                             <div key={index} className="flex flex-wrap justify-center gap-12 ">
                                 {Object.entries(image).map(([key, value]) => (
-                                    <div key={key} className="w-1/5 min-w-[220px]  rounded overflow-hidden shadow-lg bg-white transform transition duration-500 hover:scale-105">
+                                    <div key={key} className="w-1/5 min-w-[260px]  rounded overflow-hidden shadow-lg bg-white transform transition duration-500 hover:scale-105">
                                         <img src={value} alt={key} className="w-full h-32 object-cover" />
                                         <div className="px-3 bg-gradient-to-r from-pink-100 via-red-100 to-red-200 py-2">
                                             <div className="font-bold text-md text-center mb-2">{formatImageName(key)}</div>

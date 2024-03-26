@@ -52,11 +52,11 @@ export function UploadPage() {
   };
 
   return (
-    <div className='bg-red-300'>
+    <div >
     <div className="container h-full mx-auto mt-12 flex justify-center items-center flex-col">
-      <h2 className="text-3xl font-bold mb-4 text-center">Carbon Offset Integration System</h2>
-      <h3 className="text-2xl font-semibold mb-2 text-center">Select Your Images (PNG or JPEG)</h3>
-      <form onSubmit={handleSubmit} encType="multipart/form-data" className="bg-opacity-25 bg-white bg-blur-md bg-glass p-8 rounded-lg shadow-lg">
+      <h2 className="text-3xl font-bold mb-4 text-center">Upload Document</h2>
+      {/* <h3 className="text-2xl font-semibold mb-2 text-center">Select Your Images (PNG or JPEG)</h3> */}
+      <form onSubmit={handleSubmit} encType="multipart/form-data" className="bg-opacity-25 bg-gradient-to-r from-pink-100 via-red-100 to-red-200 p-8 rounded-lg shadow-lg">
         <div className="mb-4">
           <label htmlFor="rcbookfrontImage" className="block font-medium">RC Book Front Image:</label>
           <div className="mt-1 flex items-center">
