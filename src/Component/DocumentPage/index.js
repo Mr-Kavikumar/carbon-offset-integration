@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Dashboard from '../DashboardPage';
+
 
 const DocumentPage = () => {
     const token = localStorage.getItem('token');
@@ -46,8 +48,11 @@ const DocumentPage = () => {
     );
 
     return (
-        <div className="p-4 flex flex-col items-center justify-center">
-            <h2 className="text-xl font-semibold mb-5">My Images</h2>
+        <div className='flex'>
+            <Dashboard/>
+            <div className='container'>
+        <div className="p-4 flex flex-col items-center ">
+            <h2 className="text-3xl font-bold mb-4 ">My Images</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {images.map((image, index) => (
                     <div key={index} className="space-y-4">
@@ -63,6 +68,8 @@ const DocumentPage = () => {
                 ))}
             </div>
             {selectedImage && <ImageModal src={selectedImage} onClose={() => setSelectedImage(null)} />}
+        </div>
+        </div>
         </div>
     );
 };

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Bar, Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import Dashboard from '../DashboardPage';
 
 const ChartPage = () => {
     const [lineChartData, setLineChartData] = useState({
@@ -124,6 +125,8 @@ const ChartPage = () => {
   }, []);
 
   return (
+    <div className='flex'>
+      <Dashboard/>
     <div className="container mx-auto px-2 py-4">
     <h1 className="text-3xl font-bold mb-4">Communications</h1>
     <div style={{ display: 'flex', justifyContent: 'space-between', width: '80%', margin: 'auto' }}>
@@ -139,6 +142,7 @@ const ChartPage = () => {
           <Bar data={barChartData} options={chartOptions} />
         </div>
       </div>
+    </div>
     </div>
     </div>
   );
