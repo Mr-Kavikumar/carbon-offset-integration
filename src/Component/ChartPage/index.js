@@ -93,9 +93,9 @@ const ChartPage = () => {
             labels: timestampsLine,
             datasets: [
               {
-                label: 'Average CO Levels',
+                label: 'Average CO Level (per hour)',
                 data: averageCOLine,
-                borderColor: '#84bd00',
+                borderColor: '#00205b',
                 backgroundColor: 'rgba(132, 189, 0, 0.2)',
                 borderWidth: 1,
               },
@@ -106,10 +106,10 @@ const ChartPage = () => {
           labels: timestamps,
           datasets: [
             {
-              label: 'Average CO Levels (Bar)',
+              label: 'Average CO Level (per day)',
               data: averageCOValues,
               type: 'bar',
-              backgroundColor: '#00205b',
+              backgroundColor: '#2F2F81',
               borderWidth: 1,
               yAxisID: 'y',
             },
@@ -128,15 +128,15 @@ const ChartPage = () => {
     <div className='flex'>
       <Dashboard/>
     <div className="container mx-auto px-2 py-4">
-    <h1 className="text-3xl font-bold mb-4">Chart</h1>
+    <h1 className="text-3xl font-bold mb-8">Chart</h1>
     <div style={{ display: 'flex', justifyContent: 'space-between', width: '80%', margin: 'auto' }}>
-      <div style={{ width: '48%', backgroundColor: '#f3f4f7', padding: '20px', borderRadius: '10px' }}>
+      <div className="bg-gradient-to-r from-pink-100 via-red-100 to-red-200" style={{ width: '48%', backgroundColor: '#f3f4f7', padding: '20px', borderRadius: '10px' }}>
         <h2 style={{ textAlign: 'center' }}>Line Graph</h2>
         <div style={{ height: '400px' }}>
           <Line data={lineChartData} options={chartOptions} />
         </div>
       </div>
-      <div style={{ width: '48%', backgroundColor: '#f3f4f7', padding: '20px', borderRadius: '10px' }}>
+      <div className="bg-gradient-to-r from-pink-100 via-red-100 to-red-200" style={{ width: '48%', backgroundColor: '#f3f4f7', padding: '20px', borderRadius: '10px' }}>
         <h2 style={{ textAlign: 'center' }}>Bar Graph</h2>
         <div style={{ height: '400px' }}>
           <Bar data={barChartData} options={chartOptions} />

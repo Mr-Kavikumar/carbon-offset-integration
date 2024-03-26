@@ -31,7 +31,7 @@ const SignUp = () => {
   return (
     <div className="login-page h-screen flex justify-center items-center">
       <div className="img-container1 flex flex-col items-center">
-        <div className="both-part bg-green-200 bg-opacity-75 p-8 rounded-lg">
+        <div className="both-part bg-gradient-to-r from-pink-100 via-red-100 to-red-200 bg-opacity-75 p-8 rounded-lg">
           <div className="header-part text-center pb-4">
             <h1 className="text-xl font-bold">Sign up to your Account</h1>
           </div>
