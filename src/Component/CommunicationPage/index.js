@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const CommunicationsPage = () => {
+    const token = localStorage.getItem('token');
     const [communications, setCommunications] = useState([]);
 
     useEffect(() => {
@@ -9,7 +10,7 @@ const CommunicationsPage = () => {
             try {
                 const response = await axios.get('http://localhost:3003/communications', {
                     headers: {
-                        'Authorization': `Bearer YOUR_JWT_TOKEN_HERE` // Make sure to include the authorization header
+                        'Authorization': `Bearer ${token}` // Make sure to include the authorization header
                     }
                 });
                 setCommunications(response.data);
