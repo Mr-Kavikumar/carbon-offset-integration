@@ -128,7 +128,7 @@ const ChartPage = () => {
     <div className='flex'>
       <Dashboard/>
     <div className="container mx-auto px-2 py-4">
-    <h1 className="text-3xl font-bold mb-4">Communications</h1>
+    <h1 className="text-3xl font-bold mb-4">Chart</h1>
     <div style={{ display: 'flex', justifyContent: 'space-between', width: '80%', margin: 'auto' }}>
       <div style={{ width: '48%', backgroundColor: '#f3f4f7', padding: '20px', borderRadius: '10px' }}>
         <h2 style={{ textAlign: 'center' }}>Line Graph</h2>

@@ -15,30 +15,7 @@ const Sidebar = () => {
 };
 
 const Dashboard = () => {
-  const [carbonValue, setCarbonValue] = useState(null);
-
-  useEffect(() => {
-    // Assuming you have an API endpoint to fetch carbon value from Arduino
-    const fetchCarbonValue = async () => {
-      try {
-        const response = await axios.get('https://api.thingspeak.com/channels/2409021/feeds.json');
-        setCarbonValue(response.data.carbonValue);
-      } catch (error) {
-        console.error('Error fetching carbon value:', error);
-      }
-    };
-
-    // Fetch carbon value on component mount
-    fetchCarbonValue();
-
-    // Fetch carbon value every 5 seconds (adjust timing as needed)
-    const intervalId = setInterval(fetchCarbonValue, 5000);
-
-    // Cleanup function to clear interval
-    return () => clearInterval(intervalId);
-  }, []);
-
-  return (
+    return (
     <Sidebar />
   );
 };
