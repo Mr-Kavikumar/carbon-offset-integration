@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Dashboard from '../DashboardPage';
+import Dashboard from '../Dashboard';
 
 const CommunicationsPage = () => {
     const token = localStorage.getItem('token');
@@ -26,7 +26,9 @@ const CommunicationsPage = () => {
     return (
         <div className="flex">
     <Dashboard />
-    <div className="container mx-auto " style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <div className="container mx-auto px-4 py-4 ">
+    <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+        
         <h1 className="text-3xl font-bold mb-4 mt-2">Communications</h1>
         {communications.length ? (
             <ul className="divide-y divide-gray-200">
@@ -44,6 +46,7 @@ const CommunicationsPage = () => {
         ) : (
             <p className="text-gray-700">No communications found.</p>
         )}
+    </div>
     </div>
 </div>
 

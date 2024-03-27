@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Dashboard from '../DashboardPage';
+import Dashboard from '../Dashboard';
 
 export function UploadPage() {
   const [rcbookfrontImage, setRcbookfrontImage] = useState(null);

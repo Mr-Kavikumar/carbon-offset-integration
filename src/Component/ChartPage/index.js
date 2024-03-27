@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Bar, Line } from 'react-chartjs-2';
 import 'chart.js/auto';
-import Dashboard from '../DashboardPage';
+import Dashboard from '../Dashboard';
 
 const ChartPage = () => {
     const [lineChartData, setLineChartData] = useState({

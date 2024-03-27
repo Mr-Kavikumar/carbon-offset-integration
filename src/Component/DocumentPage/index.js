@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Dashboard from '../DashboardPage';
+import Dashboard from '../Dashboard';
 
 
 const DocumentPage = () => {
@@ -62,7 +62,7 @@ const DocumentPage = () => {
     return (
         <div className='flex'>
             <Dashboard/>
-            <div className='flex-grow '>
+            <div className='container mx-auto px-2 py-4 '>
                 <div className="p-4">
                     <h2 className="text-3xl font-bold mb-8 text-center">Vehicle Documents</h2>
                     <div className="flex flex-wrap justify-center gap-4" style={{ maxWidth: '900px', margin: '0 auto' }}>
